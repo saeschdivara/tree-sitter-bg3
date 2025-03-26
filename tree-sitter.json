@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "bg_3",
+      "camelcase": "Bg3",
+      "title": "Bg3",
+      "scope": "source.bg_3",
+      "file-types": [
+        "bg_3"
+      ],
+      "injection-regex": "^bg_3$",
+      "class-name": "TreeSitterBg3"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Bg3 grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "byteblender",
+        "email": "byteblender21@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-bg_3"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
