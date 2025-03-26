@@ -12,6 +12,14 @@ module.exports = grammar({
 
   rules: {
     // TODO: add the actual grammar rules
-    source_file: $ => "hello"
+    source_file: $ => "hello",
+
+    string_fragment: _ => token.immediate(prec(1, /[^"\\]+/)),
+
+    string_literal: $ => seq(
+        '"',
+        repeat($.string_fragment),
+        '"',
+    ),
   }
 });

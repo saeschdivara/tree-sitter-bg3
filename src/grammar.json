@@ -5,6 +5,37 @@
     "source_file": {
       "type": "STRING",
       "value": "hello"
+    },
+    "string_fragment": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "[^\"\\\\]+"
+        }
+      }
+    },
+    "string_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "\""
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string_fragment"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "\""
+        }
+      ]
     }
   },
   "extras": [
